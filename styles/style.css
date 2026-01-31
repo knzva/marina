@@ -4,7 +4,7 @@
 
 .header {
   display: flex;
-  align-items: center;
+  /*align-items: center;*/
   font-family: raleway, sans-serif;
   font-weight: 400;
   color: #000;
@@ -126,6 +126,24 @@
 
 .letter-spacing-extended {
   letter-spacing: 30px;
+  animation-name: aurora-border;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1.5s;
+}
+
+@keyframes aurora-border {
+  from {
+    letter-spacing: 30px;
+  }
+  50% {
+    letter-spacing: 290px;
+  }
+  to {
+    letter-spacing: 30px;
+  }
 }
 
 .no-letter-spacing {
@@ -288,7 +306,9 @@
 }
 
 .card__text:last-child {
-  padding-bottom: 50px;
+  bottom: 30px;
+  position: absolute;
+  text-shadow: 1px 1px #ee369b;
 }
 
 .card_price {
