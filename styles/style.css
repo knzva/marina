@@ -204,7 +204,7 @@
   display: block;
   width: 1100px;
   height: 100%;
-  margin-top: 130px;
+  margin-top: 85px;
 }
 
 .lots__heading {
@@ -476,3 +476,319 @@
 .inst {
   background-image: url("../images/inst.png");
 }
+@media (max-width: 760px) {
+  .body {
+    max-width: 100%;
+    background-color: #020000;
+  }
+
+  .header {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+    grid-template-rows: repeat(auto-fit, minmax(1px, 2fr));
+    min-height: clamp(44px, 15vh, 200px);
+    gap: 12px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 2px;
+    padding: 12px 0;
+  }
+
+  .header__links-list {
+    padding: 0 12px;
+    margin: 0;
+    list-style: none;
+  }
+
+  .header__list-item {
+    margin: 0;
+    padding: 0;
+  }
+
+  .header__link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    background: #332f31;
+    color: #eba7cd;
+    line-height: 1.2;
+    min-height: 44px;
+    text-transform: uppercase;
+    font-size: 13px;
+  }
+
+  .sticky-cta {
+    top: 0;
+    width: calc(100% - 24px);
+    margin: 0 12px;
+    padding: 10px 16px;
+    box-sizing: border-box;
+    background: #332f31;
+    z-index: 100;
+  }
+
+  .sticky-cta__link {
+    display: flex;
+    background-image: url(../images/telegram-icon.png);
+    width: 100%;
+    height: 40px; 
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 0px;
+  }
+  .cover {
+   display: block;
+   position: relative;
+   margin-top: 12px;
+   height: 100vh;
+   width: 100vw;
+  background-image: url("../images/main_mob.png");
+  background-position-x: center;
+  background-position-y: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.overlay {
+  opacity: 50%;
+}
+
+.cover__title {
+  font-size: 50px;
+  padding: 300px 1px 1px;
+}
+
+.no-letter-spacing {
+  letter-spacing: 29px;
+}
+.aligned-text__left {
+  letter-spacing: 0px;
+  margin-left: 23px;
+}
+
+.aligned-text__center {
+  top: 0px;
+}
+
+.aligned-text__right {
+  top: 1px;
+  left: 1px;
+  margin-right: 29px;
+}
+
+.letter-spacing-extended {
+  letter-spacing: 30px;
+  animation-name: aurora-border;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+  animation-delay: 1.5s;
+}
+
+@keyframes aurora-border {
+  from {
+    letter-spacing: 30px;
+  }
+  25% {
+    letter-spacing: -25px;
+  }
+  50% {
+    letter-spacing: 130px;
+  }
+  to {
+    letter-spacing: 30px;
+  }
+}
+.mobile_grad {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;       
+  height: 250px;      
+  z-index: 3; 
+  pointer-events: none; 
+  background: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.cover__description {
+  position: relative;
+  padding: 0;
+  font-weight: 200;
+  font-size: 18px;
+  margin-top: 180px;
+  word-spacing: 10px;
+  z-index: 4;
+}
+
+.cover__description-text {
+  margin-inline-start: 5vw;
+}
+
+.bet-button {
+  position: absolute;
+  width: calc(100% - 24px);
+  margin: 0 12px;
+  bottom: 65px;     
+  height: 50px;      
+  z-index: 3; 
+  font-weight: 500;
+  font-size: 20px;
+  text-shadow: 1px 1px #ee369b;
+}
+
+.lots {
+  display: flex;
+  width: calc(100% - 24px);
+  margin-top: 100px;
+}
+
+.lots__card-list {
+  margin-top: -150px;
+  width: 100%;
+}
+
+
+.lots__heading {
+  display: block;
+  position: absolute;
+  font-family: raleway, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: #fff;
+  margin-left: 15px;
+  margin-top: -260px;
+  text-shadow: 1px 1px #ee369b;
+}
+
+.card {
+  width: 100%;
+  background-position: left;
+}
+
+.card__title {
+  text-shadow: 1px 1px #ee369b;
+}
+
+.card_price {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18pt;
+  color: #f6a8d3;
+  padding-bottom: 7px;
+  padding-left: 0px;
+  z-index: 1;
+  border-radius: 15px;
+  border-style: outset;
+  padding-top: 40px;
+  text-align: center;
+}
+.price {
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 16pt;
+  color: #f9eaf2;
+  padding-bottom: 7px;
+  padding-right: 0px;
+  text-align: center;
+  z-index: 1;
+
+}
+.card__text:last-child {
+  bottom: 0px;
+  margin-top: 419px;
+  position: relative;
+  font-weight: 600;
+  font-size: 23px;
+}
+
+.about__logo {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  margin-left: 60px;
+}
+
+.about__title {
+  display: block;
+  position: absolute;
+  width: calc(100% - 24px);
+  font-size: 40px;
+  color: #ffffff;
+  margin-left: 30px;
+}
+
+.about__text {
+  display: block;
+  position: absolute;
+  width: 320px;
+  color: #ffffff;
+  margin-top: 350px;
+  font-size: 22px;
+  padding-left: 12px;
+}
+.footer {
+  margin-top: 1000px;
+  margin-left: 15px;
+  width: 100%;
+}
+
+.footer__address {
+  color: #edeef2;
+  font-size: 0px;
+}
+
+.footer__links-list {
+  display: block;
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  padding-top: 2px;
+  padding-left: 6px;
+  text-underline-offset: 3px;
+}
+
+.footer__list-item {
+  list-style-type: none;
+}
+
+.footer__link {
+  text-decoration: underline;
+  line-height: 20px;
+}
+
+
+.footer__social-list {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  position: absolute;
+  gap: 99px;
+  align-items: center;
+  padding-bottom: 48px;
+}
+
+.social_networks {
+  display: block;
+  background-color: #edeef2;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #ccc;       /* внешняя рамка */
+  border-radius: 8px;
+}
+
+}
+
+}
+
