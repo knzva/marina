@@ -529,7 +529,8 @@
     margin: 0 12px;
     padding: 10px 16px;
     box-sizing: border-box;
-    background: #332f31;
+    backdrop-filter: blur(10px);
+    border: 1px solid #f8ddee;
     z-index: 100;
   }
 
@@ -665,7 +666,7 @@
   font-size: 22px;
   color: #fff;
   margin-left: 15px;
-  margin-top: -260px;
+  margin-top: -240px;
   text-shadow: 1px 1px #ee369b;
 }
 
