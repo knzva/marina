@@ -125,8 +125,8 @@
 }
 
 .letter-spacing-extended {
-  --start-spacing: 330px;
-  --end-spacing: 30px;
+  --start-spacing: 30px;
+  --end-spacing: 330px;
   
   letter-spacing: var(--start-spacing);
   
@@ -617,6 +617,15 @@
     letter-spacing: 30px;
     animation: aurora 7s infinite alternate ease-in-out 0.5s;
     -webkit-animation: aurora 7s infinite alternate ease-in-out 0.5s;
+  }
+}
+@-webkit-keyframes aurora {
+  0% {
+    transform: scaleX(11);
+    transform-origin: left center;
+  }
+  100% {
+    transform: scaleX(1);
   }
 }
 
