@@ -590,8 +590,8 @@
 }
 
 .letter-spacing-extended {
-  --start-spacing: 120px;
-  --end-spacing: 30px;
+  --start-spacing: 30px;
+  --end-spacing: 120px;
   
   letter-spacing: var(--start-spacing);
   
@@ -614,7 +614,7 @@
 }
 @supports (animation: aurora 1s) or (-webkit-animation: aurora 1s) {
   .letter-spacing-extended {
-    letter-spacing: 120px;
+    letter-spacing: 30px;
     animation: aurora 7s infinite alternate ease-in-out 0.5s;
     -webkit-animation: aurora 7s infinite alternate ease-in-out 0.5s;
   }
