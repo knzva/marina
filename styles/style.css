@@ -559,12 +559,14 @@
 }
 
 .overlay {
-  opacity: 50%;
+  opacity: 60%;
+  z-index: 2;
 }
 
 .cover__title {
   font-size: 50px;
   padding: 300px 1px 1px;
+  z-index: 3;
 }
 
 .no-letter-spacing {
@@ -592,7 +594,7 @@
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease-in;
-  animation-delay: 1.5s;
+  animation-delay: 0.5s;
 }
 
 @keyframes aurora-border {
@@ -677,6 +679,12 @@
 
 .card__title {
   text-shadow: 1px 1px #ee369b;
+  z-index: 3;
+  position: relative;
+}
+
+.card__text {
+  z-index: 3;
 }
 
 .card_price {
@@ -686,11 +694,12 @@
   color: #f6a8d3;
   padding-bottom: 7px;
   padding-left: 0px;
-  z-index: 1;
+  z-index: 3;
   border-radius: 15px;
   border-style: outset;
   padding-top: 40px;
   text-align: center;
+  z-index: 3;
 }
 .price {
   font-weight: 900;
@@ -700,7 +709,7 @@
   padding-bottom: 7px;
   padding-right: 0px;
   text-align: center;
-  z-index: 1;
+  z-index: 3;
 
 }
 .card__text:last-child {
@@ -709,6 +718,7 @@
   position: relative;
   font-weight: 600;
   font-size: 23px;
+  z-index: 3;
 }
 
 .about__logo {
