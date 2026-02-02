@@ -587,7 +587,7 @@
   margin-right: 29px;
 }
 
-.letter-spacing-extended {
+letter-spacing-extended {
   letter-spacing: 30px;
   animation-name: aurora-border;
   animation-duration: 7s;
@@ -595,6 +595,13 @@
   animation-direction: alternate;
   animation-timing-function: ease-in;
   animation-delay: 0.5s;
+
+  -webkit-animation-name: aurora-border; /* Safari и другие браузеры на WebKit */
+  -webkit-animation-duration: 7s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-delay: 0.5s;
 }
 
 @keyframes aurora-border {
@@ -611,6 +618,23 @@
     letter-spacing: 30px;
   }
 }
+
+@-webkit-keyframes aurora-border { /* Safari и другие браузеры на WebKit */
+  from {
+    letter-spacing: 30px;
+  }
+  25% {
+    letter-spacing: -25px;
+  }
+  50% {
+    letter-spacing: 130px;
+  }
+  to {
+    letter-spacing: 30px;
+  }
+}
+
+
 .mobile_grad {
   position: absolute;
   left: 0;
@@ -700,6 +724,7 @@
   padding-top: 40px;
   text-align: center;
   z-index: 3;
+  backdrop-filter: blur(19px);
 }
 .price {
   font-weight: 900;
