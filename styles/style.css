@@ -612,6 +612,13 @@
   from { letter-spacing: var(--start-spacing); }
   to { letter-spacing: var(--end-spacing); }
 }
+@supports (animation: aurora 1s) or (-webkit-animation: aurora 1s) {
+  .letter-spacing-extended {
+    letter-spacing: 120px;
+    animation: aurora 7s infinite alternate ease-in-out 0.5s;
+    -webkit-animation: aurora 7s infinite alternate ease-in-out 0.5s;
+  }
+}
 
 .mobile_grad {
   position: absolute;
