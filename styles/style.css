@@ -125,25 +125,27 @@
 }
 
 .letter-spacing-extended {
-  letter-spacing: 30px;
-  animation-name: aurora-border;
-  animation-duration: 7s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out;
-  animation-delay: 1.5s;
+  --start-spacing: 330px;
+  --end-spacing: 30px;
+  
+  letter-spacing: var(--start-spacing);
+  
+  /* Стандартное свойство */
+  animation: aurora 7s infinite alternate ease-in-out 0.5s;
+  /* Префикс для Safari/iOS */
+  -webkit-animation: aurora 7s infinite alternate ease-in-out 0.5s;
 }
 
-@keyframes aurora-border {
-  from {
-    letter-spacing: 30px;
-  }
-  50% {
-    letter-spacing: 290px;
-  }
-  to {
-    letter-spacing: 30px;
-  }
+/* Префиксные keyframes для Safari/Telegram iOS */
+@-webkit-keyframes aurora {
+  from { letter-spacing: var(--start-spacing); }
+  to { letter-spacing: var(--end-spacing); }
+}
+
+/* Стандартные keyframes */
+@keyframes aurora {
+  from { letter-spacing: var(--start-spacing); }
+  to { letter-spacing: var(--end-spacing); }
 }
 
 .no-letter-spacing {
@@ -587,53 +589,29 @@
   margin-right: 29px;
 }
 
-letter-spacing-extended {
-  letter-spacing: 30px;
-  animation-name: aurora-border;
-  animation-duration: 7s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: ease-in;
-  animation-delay: 0.5s;
-
-  -webkit-animation-name: aurora-border; /* Safari и другие браузеры на WebKit */
-  -webkit-animation-duration: 7s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-  -webkit-animation-timing-function: ease-in;
-  -webkit-animation-delay: 0.5s;
+.letter-spacing-extended {
+  --start-spacing: 120px;
+  --end-spacing: 30px;
+  
+  letter-spacing: var(--start-spacing);
+  
+  /* Стандартное свойство */
+  animation: aurora 7s infinite alternate ease-in-out 0.5s;
+  /* Префикс для Safari/iOS */
+  -webkit-animation: aurora 7s infinite alternate ease-in-out 0.5s;
 }
 
-@keyframes aurora-border {
-  from {
-    letter-spacing: 30px;
-  }
-  25% {
-    letter-spacing: -25px;
-  }
-  50% {
-    letter-spacing: 130px;
-  }
-  to {
-    letter-spacing: 30px;
-  }
+/* Префиксные keyframes для Safari/Telegram iOS */
+@-webkit-keyframes aurora {
+  from { letter-spacing: var(--start-spacing); }
+  to { letter-spacing: var(--end-spacing); }
 }
 
-@-webkit-keyframes aurora-border { /* Safari и другие браузеры на WebKit */
-  from {
-    letter-spacing: 30px;
-  }
-  25% {
-    letter-spacing: -25px;
-  }
-  50% {
-    letter-spacing: 130px;
-  }
-  to {
-    letter-spacing: 30px;
-  }
+/* Стандартные keyframes */
+@keyframes aurora {
+  from { letter-spacing: var(--start-spacing); }
+  to { letter-spacing: var(--end-spacing); }
 }
-
 
 .mobile_grad {
   position: absolute;
